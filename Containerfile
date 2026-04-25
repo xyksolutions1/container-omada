@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:latest
 
 LABEL \
         org.opencontainers.image.title="Mmada" \
         org.opencontainers.image.description="Containerized Omada Controller" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/omada" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-omada/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-omada.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/omada" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-omada/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-omada.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -26,8 +26,8 @@ COPY README.md /usr/src/container/README.md
 
 ENV \
     CONTAINER_ENABLE_SCHEDULING=TRUE \
-    IMAGE_NAME="nfrastack/omada" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-omada/"
+    IMAGE_NAME="xyksolutions1/omada" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-omada/"
 
 RUN echo "" && \
     OMADA_BUILD_DEPS_ALPINE=" \
